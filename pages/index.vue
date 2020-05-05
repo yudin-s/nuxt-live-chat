@@ -4,7 +4,6 @@
       <div class="container-fluid h-100">
         <div class="row justify-content-center align-items-center h-100">
           <div class="col col-sm-6 col-md-6 col-lg-4 col-xl-3">
-            <form>
               <div class="form-group">
                 <input class="form-control form-control-lg" placeholder="Login (can be any)" type="text"
                        v-model="sender">
@@ -13,9 +12,8 @@
                 <input class="form-control form-control-lg" placeholder="Chatroom" type="text" v-model="chatRoom">
               </div>
               <div class="form-group">
-                <button class="btn btn-info btn-lg btn-block" @click="login()">Let's start!</button>
+                <button type="button" class="btn btn-info btn-lg btn-block" @click="login()">Let's start!</button>
               </div>
-            </form>
           </div>
         </div>
       </div>
@@ -45,11 +43,9 @@
           <div class="form-group">
             <input type="text" class="form-control" placeholder="Type something..." v-model="text">
           </div>
-          <form>
-            <button type="submit" class="fa fa-arrow-right" v-if="text.length" @click="sendMessage">Send <i
+            <button type="button" class="fa fa-arrow-right" v-if="text.length" @click="sendMessage">Send <i
               data-feather="send"></i>
             </button>
-          </form>
         </div><!-- chat-body-footer -->
       </div><!-- chat-body -->
     </div><!-- chat-panel -->
