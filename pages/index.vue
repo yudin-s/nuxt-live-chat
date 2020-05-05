@@ -3,9 +3,8 @@
     <div class="chat-panel">
       <div class="chat-body">
         <div class="chat-body-header">
-          <div class="avatar avatar-xs avatar-online"><span class="avatar-initial rounded-circle bg-dark">g</span></div>
 
-          <h6 class="tx-14 tx-color-01 mg-b-0 mg-l-10">George Winslett</h6>
+          <h6 class="tx-14 tx-color-01 mg-b-0 mg-l-10">Chat Room</h6>
 
         </div><!-- chat-body-header -->
 
