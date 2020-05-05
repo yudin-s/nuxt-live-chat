@@ -152,7 +152,6 @@
               this.$nextTick(() => {
                 let content = this.$el.querySelector('.chat-body-content');
                 if (content) {
-                  console.log(content.scrollHeight);
                   content.scrollTop = content.scrollHeight;
                 }
               })
@@ -186,7 +185,6 @@
       },
 
       prepareMessages(chat) {
-        console.log(chat);
         chat = filter(chat, {chat_room: this.chatRoom});
         let collection = [];
 
@@ -218,7 +216,6 @@
             this.$nextTick(() => {
               let content = this.$el.querySelector('.chat-body-content');
               if (content) {
-                console.log(content.scrollHeight);
                 content.scrollTop = content.scrollHeight;
               }
             })
