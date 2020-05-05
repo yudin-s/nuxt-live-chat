@@ -1,0 +1,398 @@
+<template>
+  <div class="content-body content-body-chat">
+    <div class="chat-panel">
+      <div class="chat-body">
+        <div class="chat-body-header">
+          <div class="avatar avatar-xs avatar-online"><span class="avatar-initial rounded-circle bg-dark">g</span></div>
+
+          <h6 class="tx-14 tx-color-01 mg-b-0 mg-l-10">George Winslett</h6>
+
+        </div><!-- chat-body-header -->
+
+        <div class="chat-body-content">
+          <ul class="chat-msg-list">
+            <li class="divider-text">July 14, 2019</li>
+            <li class="msg-item">
+              <div class="avatar avatar-sm avatar-online"><img src="https://via.placeholder.com/500/637382/fff" class="rounded-circle" alt=""></div>
+              <div class="msg-body">
+                <h6 class="msg-user">@cheryl <span>Yesterday, at 12:00pm</span></h6>
+                <p><span>I'm back once again!!</span></p>
+                <p><span>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</span></p>
+              </div>
+            </li>
+            <li class="msg-item reverse">
+              <div class="avatar avatar-sm"><span class="avatar-initial rounded-circle bg-dark">g</span></div>
+              <div class="msg-body">
+                <h6 class="msg-user">@george <span>Yesterday, at 2:50pm</span></h6>
+                <p><span>Excepteur sint occaecat cupidatat non proident</span></p>
+                <p><span>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse...</span></p>
+              </div>
+            </li>
+            <li class="divider-text">July 15, 2019</li>
+            <li class="msg-item reverse">
+              <div class="avatar avatar-sm"><span class="avatar-initial rounded-circle bg-dark">g</span></div>
+              <div class="msg-body">
+                <h6 class="msg-user">@george <span>Today, at 07:20pm</span></h6>
+                <p><span>Et harum quidem rerum facilis est et expedita distinctio.</span></p>
+              </div>
+            </li>
+            <li class="msg-item">
+              <div class="avatar avatar-sm avatar-online"><img src="https://via.placeholder.com/500/637382/fff" class="rounded-circle" alt=""></div>
+              <div class="msg-body">
+                <h6 class="msg-user">@cheryl <span>Today, at 08:00pm</span></h6>
+                <p><span>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.</span></p>
+                <p><span>Nam libero tempore, cum soluta nobis</span></p>
+                <p><span>Et harum quidem rerum facilis est et expedita distinctio.</span></p>
+              </div>
+            </li>
+            <li class="msg-item reverse">
+              <div class="avatar avatar-sm"><span class="avatar-initial rounded-circle bg-dark">g</span></div>
+              <div class="msg-body">
+                <h6 class="msg-user">@george <span>Today, at 08:40pm</span></h6>
+                <p><span>Nam libero tempore, cum soluta nobis est</span></p>
+              </div>
+            </li>
+            <li class="msg-item">
+              <div class="avatar avatar-sm avatar-online"><img src="https://via.placeholder.com/500/637382/fff" class="rounded-circle" alt=""></div>
+              <div class="msg-body">
+                <h6 class="msg-user">@cheryl <span>Today, at 08:50pm</span></h6>
+                <p><span>Nam libero tempore, cum soluta nobis</span></p>
+                <p><span>Et harum quidem rerum facilis est et expedita distinctio.</span></p>
+              </div>
+            </li>
+          </ul>
+        </div><!-- chat-body-content -->
+
+        <div class="chat-body-footer">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Type something...">
+          </div>
+          <button class="fa fa-arrow-right"><i data-feather="send"></i></button>
+        </div><!-- chat-body-footer -->
+      </div><!-- chat-body -->
+    </div><!-- chat-panel -->
+  </div><!-- content-body -->
+
+</template>
+
+<script>
+    export default {
+        name: "chat.vue"
+    }
+</script>
+
+<style lang="scss">
+
+  .chat-body-show {
+    @include media-breakpoint-down(md) {
+      .chat-sidebar { display: none; }
+      .chat-body { display: block; }
+    }
+  }
+
+  .content-body-chat {
+    height: calc(100vh - 60px);
+    padding: 15px;
+
+    @include media-breakpoint-up(sm) {
+      height: calc(100vh - 70px);
+      padding: 20px;
+    }
+
+    @include media-breakpoint-up(lg) { height: calc(100vh - 80px); }
+  }
+
+  .chat-header {
+    background-color: transparent;
+  }
+
+  .chat-panel {
+    position: relative;
+    height: 100%;
+  }
+
+  .chat-sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: $shadow-01, $shadow-base;
+    border: 1px solid darken($border-color, 2%);
+
+    @include media-breakpoint-up(md) { width: 260px; }
+    @include media-breakpoint-up(xl) { width: 280px; }
+  }
+
+  .chat-sidebar-header,
+  .chat-sidebar-footer {
+    height: 50px;
+    display: flex;
+    align-items: center;
+
+    svg {
+      width: 16px;
+      height: 16px;
+      stroke-width: 2.5px;
+    }
+
+    a {
+      color: $color-text-04;
+      @include hover-focus() { color: $color-text-02; }
+    }
+  }
+
+  .chat-sidebar-header {
+    justify-content: space-between;
+    border-bottom: 1px solid $border-color;
+    padding: 0 12px;
+  }
+
+  .chat-sidebar-footer {
+    padding: 0 15px 0 16px;
+    border-top: 1px solid $border-color;
+
+    .chat-loggeduser {
+      font-size: $font-size-sm;
+      margin-bottom: 0;
+      margin-left: 14px;
+
+      span {
+        color: $color-text-04;
+        font-weight: 400;
+      }
+    }
+
+    > div:last-child { margin-left: auto; }
+  }
+
+  .chat-sidebar-body {
+    position: relative;
+    height: calc(100% - 100px);
+    overflow: hidden;
+  }
+
+  .chat-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    .avatar {
+      flex-shrink: 0;
+    }
+  }
+
+  .chat-item {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    position: relative;
+
+    @include hover-focus() {
+      background-color: darken($color-ui-01, 1%);
+      cursor: default;
+    }
+
+    &.unread .chat-item-body {
+      span:first-child {
+        color: $color-text-01;
+        font-weight: $font-weight-medium;
+      }
+
+      p {
+        color: $color-text-02;
+        font-weight: $font-weight-medium;
+      }
+
+      .chat-msg-count { display: flex; }
+    }
+
+    &.selected {
+      background-color: darken($color-ui-01, 2.5%);
+
+      .avatar::after { box-shadow: 0 0 0 1.5px $color-ui-02; }
+    }
+  }
+
+  .chat-item-body {
+    position: relative;
+    margin-left: 12px;
+    width: calc(100% - 50px);
+
+    > div:first-child {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: $font-size-sm;
+      line-height: 1.2;
+      margin-bottom: 4px;
+
+      span:first-child { color: $color-text-03; }
+      span:last-child {
+        font-size: 11px;
+        color: $gray-600;
+      }
+    }
+
+    p {
+      color: $color-text-04;
+      width: calc(100% - 15px);
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      margin-bottom: 0;
+      font-size: $font-size-xs;
+    }
+  }
+
+  .chat-msg-count {
+    width: 14px;
+    height: 14px;
+    background-color: $red;
+    color: #fff;
+    @include border-radius(100%);
+    position: absolute;
+    bottom: 3px;
+    right: -2px;
+    font-size: 8px;
+    font-weight: 500;
+    font-family: $font-family-sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+  }
+
+  .chat-body {
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid darken($border-color, 2%);
+    box-shadow: $shadow-01, $shadow-base;
+
+  }
+
+  .chat-body-header {
+    height: 50px;
+    border-bottom: 1px solid $border-color;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+  }
+
+  .chat-body-options {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+
+    a {
+      color: $color-text-04;
+      @include hover-focus() { color: $color-text-02; }
+
+      + a { margin-left: 10px; }
+    }
+
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  .chat-body-content {
+    height: calc(100% - 100px);
+    overflow: hidden;
+    position: relative;
+    background-color: #fff;
+  }
+
+  .chat-msg-list {
+    padding: 15px;
+    margin: 0;
+    list-style: none;
+  }
+
+  .msg-item {
+    display: flex;
+    margin-bottom: 25px;
+
+    .avatar { flex-shrink: 0; }
+
+    &.reverse {
+      flex-direction: row-reverse;
+      text-align: right;
+
+      .msg-body {
+        margin-left: 0;
+        margin-right: 10px;
+
+        p span {
+          background-color: $color-brand-01;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .msg-body {
+    flex: 1;
+    margin-left: 15px;
+
+    p {
+      font-size: $font-size-sm;
+      color: $color-text-03;
+      margin-bottom: 5px;
+
+      span {
+        display: inline-block;
+        background-color: $color-ui-02;
+        padding: 7px 10px;
+
+        @include media-breakpoint-up(xl) { max-width: 80%; }
+      }
+
+      &:last-child { margin-bottom: 0; }
+    }
+  }
+
+  .msg-user {
+    font-size: $font-size-sm;
+    margin-bottom: 15px;
+
+    span {
+      color: $color-text-04;
+      font-size: 12px;
+      font-weight: 400;
+      margin-left: 5px;
+    }
+  }
+
+  .chat-body-footer {
+    height: 50px;
+    padding: 0 15px;
+    border-top: 1px solid $border-color;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+
+    .chat-body-options {
+      margin-left: 0;
+      margin-right: 15px;
+    }
+
+    .form-group {
+      margin: 0;
+      flex: 1;
+    }
+
+    .form-control {
+      border-width: 0;
+      padding: 0;
+      font-size: $font-size-sm;
+      color: $color-text-01;
+
+      &:focus { box-shadow: none; }
+    }
+  }
+
+</style>

@@ -12,7 +12,7 @@ export default {
   ** Headers of the page
   */
   head: {
-    title: process.env.npm_package_name || '',
+    title: process.env.npm_package_description || '',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -45,10 +45,21 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/style-resources',
   ],
   /*
   ** Build configuration
   */
+  styleResources: {
+    // your settings here
+    scss: [
+      '~assets/scss/global.scss'
+    ],
+    sass:[
+      '~assets/global.scss'
+
+    ]
+  },
   build: {
     /*
     ** You can extend webpack config here
