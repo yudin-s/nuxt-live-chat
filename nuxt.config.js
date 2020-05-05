@@ -35,7 +35,7 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '~/plugins/graphql-connector.js'
+    { src: '~/plugins/graphql-connector.js', mode: 'client'}
   ],
   /*
   ** Nuxt.js dev-modules
