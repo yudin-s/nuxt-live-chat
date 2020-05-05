@@ -1,19 +1,17 @@
-[![Build Status](https://travis-ci.com/yudin-s/nuxt-ghpages-boilerplate.svg?branch=master)](https://travis-ci.com/yudin-s/nuxt-ghpages-boilerplate)
-> Nuxt.js Boilerplate for GitHub Pages with TravisCI support
+[![Build Status](https://travis-ci.com/yudin-s/nuxt-live-chat.svg?branch=master)](https://travis-ci.com/yudin-s/nuxt-live-chat)
 
-This boilerplate contain all required files for publish your projects to GitHub Pages much faster.
+# VueJS & GraphQL Live Chat Example project 
 
-Just fork this repository, put components, assets, layouts, pages and middleware from exist project and have fun!
+Example project based on GraphQL Subscriptions & Nuxt.JS
 
-## FAQ 
 
-How to obtain github token & configure TravisCI for public repos? 
 
-> https://docs.travis-ci.com/user/deployment/pages/
+[My CV & Resume](https://yudin-s.github.io/)
 
-How solution is working? 
 
-> https://nuxtjs.org/faq/github-pages/
+
+
+GraphQL Server: https://hasura.io
 
 ## Build on Local Machine
 
