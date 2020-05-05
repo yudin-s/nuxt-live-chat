@@ -4,14 +4,13 @@
 
 Example project based on GraphQL Subscriptions & Nuxt.JS
 
-
+[Open website](https://yudin-s.github.io/nuxt-live-chat)
 
 [My CV & Resume](https://yudin-s.github.io/)
 
 
-
-
-GraphQL Server: https://hasura.io
+Special thank to Hasura GraphQL Server
+https://hasura.io
 
 ## Build on Local Machine
 
