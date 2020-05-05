@@ -8,6 +8,25 @@ Example project based on GraphQL Subscriptions & Nuxt.JS
 
 [My CV & Resume](https://yudin-s.github.io/)
 
+## Technology stack of this project 
+
+- GraphQL API: Subscription, Mutations and Queries. 
+- Apollo Client 
+- Nuxt.JS 2.12 (Vue.JS)
+- Boostrap 4 
+- PerfectScrollbar 
+
+## How to use 
+
+This project is simple Nuxt.JS + GraphQL live chat what was compiled 
+into native HTML and published at GitHub Pages  
+
+You can use hash at end of the link for setup special link and share 
+temporary rooms with friends! 
+
+Like: 
+
+> https://yudin-s.github.io/nuxt-live-chat#[chatroom name]
 
 Special thank to Hasura GraphQL Server
 https://hasura.io

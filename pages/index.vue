@@ -9,7 +9,7 @@
                        v-model="sender">
               </div>
               <div class="form-group">
-                <input class="form-control form-control-lg" placeholder="Chatroom" type="text" v-model="chatRoom">
+                <input class="form-control form-control-lg" placeholder="Chat Channel" type="text" v-model="chatRoom">
               </div>
               <div class="form-group">
                 <button type="button" class="btn btn-info btn-lg btn-block" @click="login()">Let's start!</button>
@@ -23,7 +23,7 @@
     <div class="chat-panel" v-if="isLoggedIn()">
       <div class="chat-body">
         <div class="chat-body-header">
-
+          <button @click="logout()" type="button">Log out</button>
           <h6 class="tx-14 tx-color-01 mg-b-0 mg-l-10">Chat Room - {{chatRoom}}</h6>
         </div><!-- chat-body-header -->
 
@@ -229,6 +229,9 @@
 
 <style lang="scss">
 
+  .panel{
+    height: 100%;
+  }
   .chat-body-show {
     @include media-breakpoint-down(md) {
       .chat-sidebar {
@@ -242,7 +245,6 @@
 
   .content-body-chat {
     height: calc(100vh - 60px);
-    padding: 15px;
 
     @include media-breakpoint-up(sm) {
       height: calc(100vh - 70px);
@@ -250,6 +252,8 @@
     }
 
     @include media-breakpoint-up(lg) {
+      padding: 15px;
+
       height: calc(100vh - 80px);
     }
   }
